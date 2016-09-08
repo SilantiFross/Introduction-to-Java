@@ -9,7 +9,7 @@ import org.junit.Test;
 public class ExpressionTest {
 
     @Test
-    public void TestAnswer() {
+    public void getAnswer() throws Exception {
         Expression expression = new Expression(0, 0);
         double result = expression.getAnswer();
         Assert.assertTrue("Result != " + result, result == 0.5);

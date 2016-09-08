@@ -15,7 +15,5 @@ public class Point {
 
     public float getX() { return this.x; }
 
-    public float getY() {
-        return this.y;
-    }
+    public float getY() { return this.y; }
 }

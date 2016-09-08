@@ -6,10 +6,15 @@ package com.tasks.task2;
 public class Controller {
 
     private Point point;
+    private CoordinateSystem coordinateSystem;
 
     public Controller(float x, float y) {
-        point = new Point(x, y);
+        this.point = new Point(x, y);
+        coordinateSystem = new CoordinateSystem();
     }
 
+    public boolean checkPointIncluded() {
+        return coordinateSystem.isPointIncluded(point);
+    }
 
 }

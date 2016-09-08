@@ -3,7 +3,6 @@ package com.tasks.task1;
 /**
  * Created by silan on 08.09.2016.
  */
-
 public class Expression {
 
     private double x;
