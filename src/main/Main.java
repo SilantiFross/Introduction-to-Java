@@ -1,8 +1,9 @@
 package main;
 
-import main.CoordinateSystem.CoordinateSystem;
-import main.Expression.Expression;
-import main.CoordinateSystem.Point;
+import main.coordinateSystem.CoordinateSystem;
+import main.expression.Expression;
+import main.coordinateSystem.Point;
+import main.tableOfTangents.TableOfTangents;
 
 public class Main {
 
@@ -12,5 +13,8 @@ public class Main {
 
         Point point = new Point(3, 1);
         System.out.println(CoordinateSystem.isPointIncluded(point));
+
+        TableOfTangents tableOfTangents = new TableOfTangents(0, 180, 15);
+        System.out.println(tableOfTangents.toString());
     }
 }

@@ -1,7 +1,7 @@
 package test;
 
-import main.CoordinateSystem.CoordinateSystem;
-import main.CoordinateSystem.Point;
+import main.coordinateSystem.CoordinateSystem;
+import main.coordinateSystem.Point;
 import org.junit.Assert;
 import org.junit.Test;
 
