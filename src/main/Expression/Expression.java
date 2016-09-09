@@ -1,4 +1,4 @@
-package com.tasks.task1;
+package main.Expression;
 
 /**
  * Created by silan on 08.09.2016.
@@ -14,18 +14,15 @@ public class Expression {
     }
 
     public double getAnswer() {
-        double answer = getNumerator() / getDenominator() + x;
-        return answer;
+        return getNumerator() / getDenominator() + x;
     }
 
     private double getNumerator() {
-        double numerator = Math.pow(Math.sin(this.x + this.y), 2) + 1;
-        return numerator;
+        return Math.pow(Math.sin(this.x + this.y), 2) + 1;
     }
 
     private double getDenominator() {
         double partDenominator = 1 + Math.pow(this.x, 2) * Math.pow(this.y, 2);
-        double denominator = Math.abs(this.x - ((2 * this.x) / partDenominator)) + 2;
-        return denominator;
+        return Math.abs(this.x - ((2 * this.x) / partDenominator)) + 2;
     }
 }

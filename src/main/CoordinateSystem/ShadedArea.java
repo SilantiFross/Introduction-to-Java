@@ -1,4 +1,4 @@
-package com.tasks.task2;
+package main.CoordinateSystem;
 
 /**
  * Created by silan on 08.09.2016.
