@@ -1,4 +1,4 @@
-package main.CoordinateSystem;
+package main.coordinateSystem;
 
 /**
  * Created by silan on 08.09.2016.

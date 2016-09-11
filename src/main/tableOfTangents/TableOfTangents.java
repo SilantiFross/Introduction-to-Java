@@ -24,8 +24,8 @@ public class TableOfTangents {
         return result;
     }
 
-    private void fillingTheTable(int lowerBound, int upperLimit, float step) {
-        for (float i = lowerBound; i <= upperLimit; i += step ) {
+    private void fillingTheTable(int lowerLimit, int upperLimit, float step) {
+        for (float i = lowerLimit; i <= upperLimit; i += step ) {
             tangentFunction.put(i, Math.tan(i));
         }
     }

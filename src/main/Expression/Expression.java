@@ -1,4 +1,4 @@
-package main.Expression;
+package main.expression;
 
 /**
  * Created by silan on 08.09.2016.
