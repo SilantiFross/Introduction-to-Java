@@ -10,9 +10,13 @@ public class TableOfTangents {
 
     private Map<Float, Double> tangentFunction;
 
-    public TableOfTangents(int lowerBound, int upperLimit, float step) {
+    public TableOfTangents(int lowerLimit, int upperLimit, float step) {
         this.tangentFunction = new TreeMap<>();
-        fillingTheTable(lowerBound, upperLimit, step);
+        fillingTheTable(lowerLimit, upperLimit, step);
+    }
+
+    public Map<Float, Double> getTable(){
+        return tangentFunction;
     }
 
     @Override
