@@ -11,33 +11,32 @@ import org.junit.Test;
 public class CoordinateSystemTest {
 
     @Test
-    public void checkPointInFirstQuarter() throws Exception {
-        boolean answer = CoordinateSystem.isPointIncluded(new Point(3, 1));
-        Assert.assertTrue("Not correct!", answer);
+    public void checkPointInTopArea() throws Exception {
+        Assert.assertTrue(CoordinateSystem.isPointIncluded(new Point(-2, 3)));
+        Assert.assertTrue(CoordinateSystem.isPointIncluded(new Point(3, 3)));
     }
 
     @Test
-    public void checkPointInSecondQuarter() throws Exception {
-        boolean answer = CoordinateSystem.isPointIncluded(new Point(-3, 0));
-        Assert.assertTrue("Not correct!", answer);
+    public void checkPointInBotArea() throws Exception {
+        Assert.assertTrue(CoordinateSystem.isPointIncluded(new Point(-1, -1)));
+        Assert.assertTrue(CoordinateSystem.isPointIncluded(new Point(2, -3)));
     }
 
     @Test
-    public void checkPointInThirdQuarter() throws Exception {
-        boolean answer = CoordinateSystem.isPointIncluded(new Point(-3, 1));
-        Assert.assertTrue("Not correct!", answer);
+    public void checkPointBetweenAreas() throws Exception {
+        Assert.assertTrue(CoordinateSystem.isPointIncluded(new Point(0, 0)));
+        Assert.assertTrue(CoordinateSystem.isPointIncluded(new Point(3, 0)));
     }
 
     @Test
-    public void checkPointInFourthQuarter() throws Exception {
-        boolean answer = CoordinateSystem.isPointIncluded(new Point(6, -1));
-        Assert.assertTrue("Not correct!", answer);
+    public void checkPointOnBorder() throws Exception {
+        Assert.assertTrue(CoordinateSystem.isPointIncluded(new Point(4, 1)));
+        Assert.assertTrue(CoordinateSystem.isPointIncluded(new Point(6, -2)));
     }
 
     @Test
-    public void checkIncomingPoint() throws Exception {
-        boolean answer = CoordinateSystem.isPointIncluded(new Point(-100, 20));
-        Assert.assertFalse("Not correct!", answer);
+    public void checkPointOutsideAreas() throws Exception {
+        Assert.assertFalse(CoordinateSystem.isPointIncluded(new Point(-7, 1)));
     }
 
 }

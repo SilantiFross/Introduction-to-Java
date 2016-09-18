@@ -11,8 +11,7 @@ public class ExpressionTest {
 
     @Test
     public void checkAnswer() throws Exception {
-        Expression expression = new Expression(0, 0);
-        double result = expression.getAnswer();
-        Assert.assertTrue("Result != " + result, result == 0.5);
+        Expression expressionTest = new Expression(1, -1);
+        Assert.assertEquals(expressionTest.getAnswer(), 1.5, 0.0002);
     }
 }
