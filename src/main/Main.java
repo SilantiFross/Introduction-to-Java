@@ -1,9 +1,12 @@
 package main;
 
 import main.coordinateSystem.CoordinateSystem;
-import main.expression.Expression;
 import main.coordinateSystem.Point;
+import main.expression.Expression;
+import main.primeNumbers.ArrayOfNumbers;
 import main.tableOfTangents.TableOfTangents;
+
+import java.util.ArrayList;
 
 public class Main {
 
@@ -11,7 +14,7 @@ public class Main {
         runFirstTask();
         runSecondTask();
         runThirdTask();
-        System.out.println(15 + Math.tan(15));
+        runFourthTask();
     }
 
     private static void runFirstTask() {
@@ -27,5 +30,21 @@ public class Main {
     private static void runThirdTask() {
         TableOfTangents tableOfTangents = new TableOfTangents(0, 180, 15);
         System.out.println(tableOfTangents.toString());
+    }
+
+    private static void runFourthTask() {
+        ArrayList<Integer> numbers = new ArrayList<Integer>() {{
+            add(2);
+            add(4);
+            add(5);
+            add(13);
+            add(12);
+        }};
+        ArrayOfNumbers arrayOfNumbers = new ArrayOfNumbers(numbers);
+        ArrayList<Integer> indicesOfPrimeNumbers = arrayOfNumbers.getIndicesOfPrimeNumbers();
+
+        for (int indexPrimeNumber: indicesOfPrimeNumbers) {
+            System.out.println(indexPrimeNumber + " ");
+        }
     }
 }

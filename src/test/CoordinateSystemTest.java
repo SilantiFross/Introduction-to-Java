@@ -9,6 +9,7 @@ import org.junit.Test;
  * Created by silan on 08.09.2016.
  */
 public class CoordinateSystemTest {
+
     @Test
     public void checkPointInFirstQuarter() throws Exception {
         boolean answer = CoordinateSystem.isPointIncluded(new Point(3, 1));

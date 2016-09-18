@@ -4,17 +4,14 @@ import main.tableOfTangents.TableOfTangents;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Collection;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by silan on 18.09.2016.
  */
 public class TableOfTangentsTest {
+
     @Test
     public void checkTableOfTangents() throws Exception {
         Map<Float, Double> testTable;
