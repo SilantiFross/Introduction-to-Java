@@ -51,7 +51,7 @@ public class Main {
         ArrayList<Integer> indicesOfPrimeNumbers = arrayOfNumbers.getIndicesOfPrimeNumbers();
 
         System.out.println("4. ");
-        for (int indexPrimeNumber: indicesOfPrimeNumbers) {
+        for (int indexPrimeNumber : indicesOfPrimeNumbers) {
             System.out.println(indexPrimeNumber + " ");
         }
         System.out.println();
@@ -65,7 +65,7 @@ public class Main {
 
     private static void runSixthTask() {
         double[] sequence = {2.0, 5.0, 6.0};
-        double[][] matrix =  Matrix.generate(sequence);
+        double[][] matrix = Matrix.generate(sequence);
 
         System.out.println("6. ");
         for (double[] line : matrix) {
@@ -80,7 +80,7 @@ public class Main {
         double[] array = {12.0, 123124.0, 5634.5, 5634.4, 1.2, 6.4, 123.5, 67856.8};
         Sorter.sortShell(array);
         System.out.println("7. ");
-        for (double value: array) {
+        for (double value : array) {
             System.out.print(value + " ");
         }
     }

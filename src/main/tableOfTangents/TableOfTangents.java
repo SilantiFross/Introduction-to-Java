@@ -15,7 +15,7 @@ public class TableOfTangents {
         fillingTheTable(lowerLimit, upperLimit, step);
     }
 
-    public Map<Float, Double> getTable(){
+    public Map<Float, Double> getTable() {
         return tangentFunction;
     }
 
@@ -29,7 +29,7 @@ public class TableOfTangents {
     }
 
     private void fillingTheTable(int lowerLimit, int upperLimit, float step) {
-        for (float i = lowerLimit; i <= upperLimit; i += step ) {
+        for (float i = lowerLimit; i <= upperLimit; i += step) {
             tangentFunction.put(i, Math.tan(i));
         }
     }

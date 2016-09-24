@@ -16,7 +16,7 @@ public class ArrayOfNumbers {
 
     public ArrayList<Integer> getIndicesOfPrimeNumbers() {
         ArrayList<Integer> indicesOfPrimeNumbers = new ArrayList<>();
-        for (int number: numbers)
+        for (int number : numbers)
             if (isPrime(number))
                 indicesOfPrimeNumbers.add(numbers.indexOf(number));
         return indicesOfPrimeNumbers;
@@ -25,7 +25,7 @@ public class ArrayOfNumbers {
     private boolean isPrime(int number) {
         if (number % 2 == 0 && number != 2) return false;
         for (int i = 3; i * i <= number; i += 2) {
-            if(number % i == 0)
+            if (number % i == 0)
                 return false;
         }
         return true;
