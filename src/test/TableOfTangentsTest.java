@@ -14,15 +14,14 @@ public class TableOfTangentsTest {
 
     @Test
     public void checkTableOfTangents() throws Exception {
-        Map<Float, Double> testTable;
-        Map<Float, Double> manualTestTable = new TreeMap<>();
-        manualTestTable.put(0.0f, 0.0);
-        manualTestTable.put(15f, -0.8559934009085188);
+        Map<Float, Double> expectedTestTable = new TreeMap<>();
+        expectedTestTable.put(0.0f, 0.0);
+        expectedTestTable.put(15f, -0.8559934009085188);
 
         TableOfTangents tableOfTangents = new TableOfTangents(0, 15, 15);
-        testTable = tableOfTangents.getTable();
+        Map<Float, Double> receivedTable = tableOfTangents.getTable();
 
-        Assert.assertEquals(manualTestTable.entrySet(), testTable.entrySet());
+        Assert.assertEquals(expectedTestTable.entrySet(), receivedTable.entrySet());
     }
 
 }

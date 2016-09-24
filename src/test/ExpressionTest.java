@@ -12,6 +12,6 @@ public class ExpressionTest {
     @Test
     public void checkAnswer() throws Exception {
         Expression expressionTest = new Expression(1, -1);
-        Assert.assertEquals(expressionTest.getAnswer(), 1.5, 0.0002);
+        Assert.assertEquals(expressionTest.getAnswer(), 1.5, 0.0001);
     }
 }

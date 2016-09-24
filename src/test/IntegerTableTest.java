@@ -13,7 +13,7 @@ public class IntegerTableTest {
 
     @Test
     public void checkIncreasingSequence() {
-        int[] testArray = {1, 4, 6, 3, 8, 2, 10}; // {1, 4, 6, 8, 10} del: {4, 3}
+        int[] testArray = {1, 4, 6, 3, 8, 2, 10}; // answer: {1, 4, 6, 8, 10} del: {4, 3}
         IntegerTable integerTable = new IntegerTable(testArray);
         Assert.assertEquals(2, integerTable.getNumberOfUnnecessaryElements());
     }
