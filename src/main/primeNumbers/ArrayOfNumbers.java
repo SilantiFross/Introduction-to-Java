@@ -7,6 +7,7 @@ import java.util.List;
  * Created by silan on 18.09.2016.
  */
 public class ArrayOfNumbers {
+
     private List<Integer> numbers;
 
     public ArrayOfNumbers(ArrayList<Integer> numbers) {
