@@ -67,11 +67,7 @@ public class Book {
     }
 
     @Override
-    public Book clone() throws CloneNotSupportedException {
-        Book newBook = (Book)super.clone();
-        newBook.title = title;
-        newBook.author = author;
-        newBook.price = price;
-        return newBook;
+    public Book clone() {
+        return new Book(title, author, price);
     }
 }
