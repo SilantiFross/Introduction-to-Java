@@ -21,12 +21,12 @@ public class ArrayOfNumbersTest {
         }};
         ArrayOfNumbers arrayOfNumbers = new ArrayOfNumbers(numbers);
 
-        ArrayList<Integer> receivedIndicesOfPrimeNumbers = arrayOfNumbers.getIndicesOfPrimeNumbers();
+        ArrayList<Integer> actualIndicesOfPrimeNumbers = arrayOfNumbers.getIndicesOfPrimeNumbers();
         ArrayList<Integer> expectedIndicesOfPrimeNumbers = new ArrayList<Integer>() {{
             add(0);
             add(2);
         }};
 
-        Assert.assertEquals(receivedIndicesOfPrimeNumbers, expectedIndicesOfPrimeNumbers);
+        Assert.assertEquals(expectedIndicesOfPrimeNumbers, actualIndicesOfPrimeNumbers);
     }
 }

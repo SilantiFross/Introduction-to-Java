@@ -8,6 +8,7 @@ import main.matrix.Matrix;
 import main.primeNumbers.ArrayOfNumbers;
 import main.sortShell.Sorter;
 import main.tableOfTangents.TableOfTangents;
+import main.twoSequence.Merger;
 
 import java.util.ArrayList;
 
@@ -21,6 +22,7 @@ public class Main {
         runFifthTask();
         runSixthTask();
         runSeventhTask();
+        runEighthTask();
     }
 
     private static void runFirstTask() {
@@ -29,8 +31,7 @@ public class Main {
     }
 
     private static void runSecondTask() {
-        Point point = new Point(3, 1);
-        System.out.println("2. " + CoordinateSystem.isPointIncluded(point));
+        System.out.println("2. " + CoordinateSystem.isPointIncluded(new Point(3, 1)));
     }
 
     private static void runThirdTask() {
@@ -58,14 +59,12 @@ public class Main {
     }
 
     private static void runFifthTask() {
-        int[] array = {1, 3, 5, 123, 8, 12, 9};
-        IntegerTable integerTable = new IntegerTable(array);
+        IntegerTable integerTable = new IntegerTable(new int[] {1, 3, 5, 123, 8, 12, 9});
         System.out.println("5. " + integerTable.getNumberOfUnnecessaryElements());
     }
 
     private static void runSixthTask() {
-        double[] sequence = {2.0, 5.0, 6.0};
-        double[][] matrix = Matrix.generate(sequence);
+        double[][] matrix = Matrix.generate(new double[] {2.0, 5.0, 6.0});
 
         System.out.println("6. ");
         for (double[] line : matrix) {
@@ -83,5 +82,16 @@ public class Main {
         for (double value : array) {
             System.out.print(value + " ");
         }
+        System.out.println();
+    }
+
+    private static void runEighthTask() {
+        Merger merger = new Merger();
+        int[] indicesOfElementsToInsert = merger.getObtainSpaceToInsert(new double[] {1, 3, 5, 7, 9, 11}, new double[] {2, 4, 6, 8,});
+        System.out.println("\n8. ");
+        for (int indexOfElementToInsert: indicesOfElementsToInsert) {
+            System.out.print(indexOfElementToInsert + " ");
+        }
+        System.out.println();
     }
 }
