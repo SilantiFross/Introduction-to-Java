@@ -5,17 +5,19 @@ import java.util.Objects;
 /**
  * Created by silan on 25.09.2016.
  */
-public class Book {
+public class Book implements Comparable<Book> {
 
     private static int edition;
     private String title;
     private String author;
     private int price;
+    private String isbn;
 
-    public Book(String title, String author, int price) {
+    public Book(String title, String author, int price, String isbn) {
         this.title = title;
         this.author = author;
         this.price = price;
+        this.isbn = isbn;
     }
 
     public void setEdition(int value) {
@@ -24,7 +26,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Title: '" + title + "', Author: '" + author + "', Price: '" + price + "', Edition: '" + edition + "'";
+        return "Title: '" + title + "', Author: '" + author + "', Price: '" + price + "', ISBN: '" + isbn + "', Edition: '" + edition + "'";
     }
 
     @Override
@@ -68,6 +70,11 @@ public class Book {
 
     @Override
     public Book clone() {
-        return new Book(title, author, price);
+        return new Book(title, author, price, isbn);
+    }
+
+    @Override
+    public int compareTo(Book book) {
+        return isbn.compareTo(book.isbn);
     }
 }

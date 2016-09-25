@@ -16,6 +16,8 @@ import main.twoSequence.Merger;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Main {
 
@@ -115,8 +117,8 @@ public class Main {
     }
 
     private static void runTwelfthTask() {
-        Book book = new Book("The Glass Bead Game", "Hermann Hesse", 10);
-        ProgrammerBook programmerBook = new ProgrammerBook("Clean code", "Uncle Bob", 30, "Java", 3);
+        Book book = new Book("The Glass Bead Game", "Hermann Hesse", 10, "978-5-17");
+        ProgrammerBook programmerBook = new ProgrammerBook("Clean code", "Uncle Bob", 30, "978-5-496", "Java", 3);
         book.setEdition(3);
         System.out.println("12. " + book.toString());
         System.out.println(programmerBook.toString());
