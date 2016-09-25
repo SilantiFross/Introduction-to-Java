@@ -1,15 +1,20 @@
 package main;
 
+import main.basketWithBalls.Ball;
+import main.basketWithBalls.Basket;
 import main.coordinateSystem.CoordinateSystem;
 import main.coordinateSystem.Point;
 import main.expression.Expression;
 import main.increasingSequence.IntegerTable;
 import main.matrix.Matrix;
+import main.overridingMethods.Book;
+import main.overridingMethods.ProgrammerBook;
 import main.primeNumbers.ArrayOfNumbers;
 import main.sortShell.Sorter;
 import main.tableOfTangents.TableOfTangents;
 import main.twoSequence.Merger;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Main {
@@ -23,6 +28,8 @@ public class Main {
         runSixthTask();
         runSeventhTask();
         runEighthTask();
+        runNinthTask();
+        runTwelfthTask();
     }
 
     private static void runFirstTask() {
@@ -93,5 +100,25 @@ public class Main {
             System.out.print(indexOfElementToInsert + " ");
         }
         System.out.println();
+    }
+
+    private static void runNinthTask() {
+        ArrayList<Ball> balls = new ArrayList<Ball>() {{
+            add(new Ball(Color.red, 3));
+            add(new Ball(Color.blue, 4));
+            add(new Ball(Color.blue, 3));
+        }};
+        Basket basket = new Basket(balls);
+        System.out.println("9. ");
+        System.out.println("Weight of balls in basket: " + basket.getWeightOfBalls());
+        System.out.println("Number of blue balls: " + basket.getNumberOfBallsWithColor(Color.blue));
+    }
+
+    private static void runTwelfthTask() {
+        Book book = new Book("The Glass Bead Game", "Hermann Hesse", 10);
+        ProgrammerBook programmerBook = new ProgrammerBook("Clean code", "Uncle Bob", 30, "Java", 3);
+        book.setEdition(3);
+        System.out.println("12. " + book.toString());
+        System.out.println(programmerBook.toString());
     }
 }
