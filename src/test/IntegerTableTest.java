@@ -4,8 +4,6 @@ import main.increasingSequence.IntegerTable;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by silan on 24.09.2016.
  */

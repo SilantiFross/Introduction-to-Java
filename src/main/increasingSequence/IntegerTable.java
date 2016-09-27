@@ -19,15 +19,15 @@ public class IntegerTable {
 
     private int[] getInitializedArray(int length) {
         int[] array = new int[length];
-        for (int i = 0; i < length; i++ )
+        for (int i = 0; i < length; i++)
             array[i] = 1;
         return array;
     }
 
     private int[] countOptimizedSequenceValues(int[] sequence) {
-        for (int i = 1; i < table.length; i++ )
-            for (int j = 0; j < i; j++ )
-                if ( table[i] > table[j] && sequence[i] < sequence[j] + 1)
+        for (int i = 1; i < table.length; i++)
+            for (int j = 0; j < i; j++)
+                if (table[i] > table[j] && sequence[i] < sequence[j] + 1)
                     sequence[i] = sequence[j] + 1;
         return sequence;
     }

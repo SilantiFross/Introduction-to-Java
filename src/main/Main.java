@@ -16,8 +16,6 @@ import main.twoSequence.Merger;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
 
 public class Main {
 
@@ -68,12 +66,12 @@ public class Main {
     }
 
     private static void runFifthTask() {
-        IntegerTable integerTable = new IntegerTable(new int[] {1, 3, 5, 123, 8, 12, 9});
+        IntegerTable integerTable = new IntegerTable(new int[]{1, 3, 5, 123, 8, 12, 9});
         System.out.println("5. " + integerTable.getNumberOfUnnecessaryElements());
     }
 
     private static void runSixthTask() {
-        double[][] matrix = Matrix.generate(new double[] {2.0, 5.0, 6.0});
+        double[][] matrix = Matrix.generate(new double[]{2.0, 5.0, 6.0});
 
         System.out.println("6. ");
         for (double[] line : matrix) {
@@ -96,9 +94,9 @@ public class Main {
 
     private static void runEighthTask() {
         Merger merger = new Merger();
-        int[] indicesOfElementsToInsert = merger.getObtainSpaceToInsert(new double[] {1, 3, 5, 7, 9, 11}, new double[] {2, 4, 6, 8,});
+        int[] indicesOfElementsToInsert = merger.getObtainSpaceToInsert(new double[]{1, 3, 5, 7, 9, 11}, new double[]{2, 4, 6, 8,});
         System.out.println("\n8. ");
-        for (int indexOfElementToInsert: indicesOfElementsToInsert) {
+        for (int indexOfElementToInsert : indicesOfElementsToInsert) {
             System.out.print(indexOfElementToInsert + " ");
         }
         System.out.println();

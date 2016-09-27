@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Created by silan on 24.09.2016.
  */
-public class SorterTest {
+public class SorterShellTest {
 
     @Test
     public void checkSortingShell() {

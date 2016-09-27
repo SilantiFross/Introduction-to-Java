@@ -32,7 +32,7 @@ public class Basket {
 
     public int getNumberOfBallsWithColor(Color color) {
         int numberOfBallsWithColor = 0;
-        for (Ball ball: balls) {
+        for (Ball ball : balls) {
             if (ball.getColor() == color) {
                 numberOfBallsWithColor++;
             }

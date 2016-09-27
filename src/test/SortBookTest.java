@@ -8,17 +8,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by silan on 25.09.2016.
  */
 public class SortBookTest {
 
-    private boolean isSorted(ArrayList<Book> books)
-    {
+    private boolean isSorted(ArrayList<Book> books) {
         for (int i = 1; i < books.size(); i++)
-            if (books.get(i-1).compareTo(books.get(i)) > 0) return false;
+            if (books.get(i - 1).compareTo(books.get(i)) > 0) return false;
 
         return true;
     }

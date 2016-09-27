@@ -8,8 +8,6 @@ import org.junit.Test;
 import java.awt.*;
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by silan on 25.09.2016.
  */
