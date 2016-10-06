@@ -16,6 +16,7 @@ import main.twoSequence.Merger;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class Main {
 
@@ -43,8 +44,12 @@ public class Main {
 
     private static void runThirdTask() {
         TableOfTangents tableOfTangents = new TableOfTangents(0, 180, 15);
+        Map<Float, Double> tangentFunction = tableOfTangents.getTable();
         System.out.println("3.");
-        System.out.println(tableOfTangents.toString());
+        for(Map.Entry entry : tangentFunction.entrySet()) {
+            System.out.print(String.format("%1$5.1f| %2$6.3f", entry.getKey(), entry.getValue()) + System.lineSeparator());
+        }
+
     }
 
     private static void runFourthTask() {
